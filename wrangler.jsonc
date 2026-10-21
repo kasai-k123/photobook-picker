@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "photobook-picker",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-21",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": true },
+  "analytics_engine_datasets": [{ "binding": "EVENTS", "dataset": "photobook_picker_events" }],
+  "observability": { "enabled": false }
+}

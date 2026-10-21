@@ -1,0 +1,15 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import { catalog, compareProducts } from '../../lib/catalog';
+export function getStaticPaths() { return catalog.providers.map(provider => ({ params: { id: provider.id }, props: { provider } })); }
+const { provider } = Astro.props;
+const products = compareProducts({}, catalog.products.filter(p => p.providerId === provider.id));
+const sourceIds = new Set(products.flatMap(p => p.sourceIds));
+---
+<Layout title={`${provider.name}の料金・商品`} service={provider.id}>
+  <div class="intro"><a href="/">← 全商品を比較する</a><p class="eyebrow">サービス別の掲載商品</p><h1>{provider.name}</h1><p>掲載している{products.length}商品の仕様と料金を確認できます。</p><a href={provider.officialUrl} data-outbound={provider.id} target="_blank" rel="noopener noreferrer">公式サイトへ ↗<span class="sr-only">（新しいタブ）</span></a></div>
+  <p class="notice">税込・1冊・割引なしの参考額です。掲載商品のみを比較しており、すべてのサイズ・ページ数を網羅していません。配送方法と仕様は商品ごとにご確認ください。</p>
+  <section class="product-grid" aria-label={`${provider.name}の商品`}>{products.map(product => <ProductCard product={product} />)}</section>
+  <section class="prose"><h2>料金・仕様の出典</h2><p>情報確認日：{catalog.asOf}</p><ul>{catalog.sources.filter(s => sourceIds.has(s.id)).map(s => <li><a href={s.url} data-outbound={s.id}>{s.title}</a></li>)}</ul><a href="/methodology/">比較方法と価格の前提を見る</a></section>
+</Layout>

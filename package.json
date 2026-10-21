@@ -1,0 +1,24 @@
+{
+  "name": "photobook-picker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check && tsc --project tsconfig.worker.json",
+    "test": "vitest run",
+    "build": "astro build && wrangler deploy --dry-run --outdir .worker-build",
+    "preview": "wrangler dev"
+  },
+  "dependencies": {
+    "astro": "^7.4.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@types/node": "^24.0.0",
+    "jsdom": "^26.1.0",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5",
+    "wrangler": "^4.45.0"
+  }
+}

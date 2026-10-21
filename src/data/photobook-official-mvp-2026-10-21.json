@@ -1,0 +1,623 @@
+{
+  "site": {
+    "proposedName": "フォトブック料金くらべ",
+    "proposedSlug": "photobook-picker",
+    "publicUrl": null,
+    "workerName": null,
+    "note": "サイト名・公開先は未確定。既存GitHubへの操作や新規リポジトリ作成を許可するものではない"
+  },
+  "asOf": "2026-10-21",
+  "dataBasis": "各社公式価格。税込・1冊・割引なし。キャンペーンは除外。掲載例16商品についてのみ保証。",
+  "providers": [
+    {
+      "id": "mybook",
+      "name": "MyBook",
+      "officialUrl": "https://www.mybook.co.jp/",
+      "affiliateUrl": null
+    },
+    {
+      "id": "fujiphoto",
+      "name": "フジフォトアルバム",
+      "officialUrl": "https://fujiphoto.co.jp/photoalbum/",
+      "affiliateUrl": null
+    },
+    {
+      "id": "photorevo",
+      "name": "フォトレボ",
+      "officialUrl": "https://photorevo.net/",
+      "affiliateUrl": null
+    },
+    {
+      "id": "photoback",
+      "name": "Photoback",
+      "officialUrl": "https://www.photoback.jp/",
+      "affiliateUrl": null
+    },
+    {
+      "id": "bon",
+      "name": "BON",
+      "officialUrl": "https://bon-book.jp/photobook/",
+      "affiliateUrl": null
+    },
+    {
+      "id": "kitamura",
+      "name": "カメラのキタムラ",
+      "officialUrl": "https://photobook.kitamura.jp/",
+      "affiliateUrl": null
+    }
+  ],
+  "products": [
+    {
+      "id": "mybook-book-16",
+      "providerId": "mybook",
+      "productName": "book",
+      "widthMm": 160,
+      "heightMm": 160,
+      "pageCount": 16,
+      "coverCategory": "hard",
+      "binding": "無線綴じ",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 2420,
+      "shippingJpyTaxIncluded": 220,
+      "shippingMethod": "ゆうメール・1冊",
+      "exampleTotalJpyTaxIncluded": 2640,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://www.mybook.co.jp/products/book/book/",
+      "sourceIds": [
+        "M1",
+        "M4",
+        "M5"
+      ],
+      "notes": "写真17枚を使う固定レイアウト。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "mybook-art-sc-180-20",
+      "providerId": "mybook",
+      "productName": "ART-SC 180S",
+      "widthMm": 180,
+      "heightMm": 180,
+      "pageCount": 20,
+      "coverCategory": "soft",
+      "binding": "無線綴じ",
+      "smartphoneEditing": "no",
+      "bookPriceJpyTaxIncluded": 3840,
+      "shippingJpyTaxIncluded": 650,
+      "shippingMethod": "宅急便",
+      "exampleTotalJpyTaxIncluded": 4490,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://www.mybook.co.jp/products/book/art-sc/price.html",
+      "sourceIds": [
+        "M2",
+        "M4",
+        "M5"
+      ],
+      "notes": "かんたん作成（スマホ）の対応商品一覧にART-SCなし。PC向けこだわり編集対象。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "mybook-art-hc-180-20",
+      "providerId": "mybook",
+      "productName": "ART-HC 180S",
+      "widthMm": 186,
+      "heightMm": 186,
+      "pageCount": 20,
+      "coverCategory": "hard",
+      "binding": "無線綴じ",
+      "smartphoneEditing": "unknown",
+      "bookPriceJpyTaxIncluded": 4420,
+      "shippingJpyTaxIncluded": 650,
+      "shippingMethod": "宅急便",
+      "exampleTotalJpyTaxIncluded": 5070,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://www.mybook.co.jp/products/book/art-hc/price.html",
+      "sourceIds": [
+        "M3",
+        "M4",
+        "M5"
+      ],
+      "notes": "ART-HCは一部スマホ対応だが、このサイズ・ページ数の対応を個別確認できていない。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "fujiphoto-square210-12",
+      "providerId": "fujiphoto",
+      "productName": "オリジナルアルバム 210角",
+      "widthMm": 210,
+      "heightMm": 210,
+      "pageCount": 12,
+      "coverCategory": "hard",
+      "binding": "ハードカバー",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 4620,
+      "shippingJpyTaxIncluded": 990,
+      "shippingMethod": "全国一律配送・1注文",
+      "exampleTotalJpyTaxIncluded": 5610,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://fujiphoto.co.jp/photoalbum/price.html",
+      "sourceIds": [
+        "F1",
+        "F2"
+      ],
+      "notes": "基本のオリジナルアルバム。化粧箱オプションなし。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "fujiphoto-square210-24",
+      "providerId": "fujiphoto",
+      "productName": "オリジナルアルバム 210角",
+      "widthMm": 210,
+      "heightMm": 210,
+      "pageCount": 24,
+      "coverCategory": "hard",
+      "binding": "ハードカバー",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 6930,
+      "shippingJpyTaxIncluded": 990,
+      "shippingMethod": "全国一律配送・1注文",
+      "exampleTotalJpyTaxIncluded": 7920,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://fujiphoto.co.jp/photoalbum/price.html",
+      "sourceIds": [
+        "F1",
+        "F2"
+      ],
+      "notes": "基本のオリジナルアルバム。化粧箱オプションなし。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "fujiphoto-a4-24",
+      "providerId": "fujiphoto",
+      "productName": "オリジナルアルバム A4縦",
+      "widthMm": 210,
+      "heightMm": 297,
+      "pageCount": 24,
+      "coverCategory": "hard",
+      "binding": "ハードカバー",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 6930,
+      "shippingJpyTaxIncluded": 990,
+      "shippingMethod": "全国一律配送・1注文",
+      "exampleTotalJpyTaxIncluded": 7920,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://fujiphoto.co.jp/photoalbum/price.html",
+      "sourceIds": [
+        "F1",
+        "F2"
+      ],
+      "notes": "本文サイズ。実際の表紙は本文より少し大きい。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "photorevo-soft-a5v-16",
+      "providerId": "photorevo",
+      "productName": "ソフトカバー A5バーチカル",
+      "widthMm": 140,
+      "heightMm": 200,
+      "pageCount": 16,
+      "coverCategory": "soft",
+      "binding": "無線綴じ・PUR糊",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 1200,
+      "shippingJpyTaxIncluded": 660,
+      "shippingMethod": "通常便（クレジット決済）",
+      "exampleTotalJpyTaxIncluded": 1860,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://photorevo.net/products_item/sa5v/",
+      "sourceIds": [
+        "R1",
+        "R4"
+      ],
+      "notes": "A5変形サイズ。8〜16ページは同価格。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "photorevo-hard-a5v-16",
+      "providerId": "photorevo",
+      "productName": "ハードカバー A5バーチカル",
+      "widthMm": 140,
+      "heightMm": 200,
+      "pageCount": 16,
+      "coverCategory": "hard",
+      "binding": "無線綴じ・PUR糊",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 2400,
+      "shippingJpyTaxIncluded": 660,
+      "shippingMethod": "通常便（クレジット決済）",
+      "exampleTotalJpyTaxIncluded": 3060,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://photorevo.net/products_item/ha5v/",
+      "sourceIds": [
+        "R2",
+        "R4"
+      ],
+      "notes": "A5変形サイズ。8〜16ページは同価格。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "photorevo-soft-m-24",
+      "providerId": "photorevo",
+      "productName": "ソフトカバー M",
+      "widthMm": 200,
+      "heightMm": 200,
+      "pageCount": 24,
+      "coverCategory": "soft",
+      "binding": "無線綴じ・PUR糊",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 3560,
+      "shippingJpyTaxIncluded": 660,
+      "shippingMethod": "通常便（クレジット決済）",
+      "exampleTotalJpyTaxIncluded": 4220,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://photorevo.net/products_item/sm/",
+      "sourceIds": [
+        "R3",
+        "R4"
+      ],
+      "notes": "200mm角。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "photoback-pocket-16",
+      "providerId": "photoback",
+      "productName": "POCKET",
+      "widthMm": 90,
+      "heightMm": 128,
+      "pageCount": 16,
+      "coverCategory": "flat_pasted",
+      "binding": "合紙製本・見開きフラット",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 1210,
+      "shippingJpyTaxIncluded": 677,
+      "shippingMethod": "通常便（宅急便）",
+      "exampleTotalJpyTaxIncluded": 1887,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://www.photoback.jp/book/pocket",
+      "sourceIds": [
+        "P1"
+      ],
+      "notes": "縦型90×128mm。ネコポス290円の選択肢もあるが、この比較では宅急便を使用。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "photoback-rough-24",
+      "providerId": "photoback",
+      "productName": "ROUGH",
+      "widthMm": 150,
+      "heightMm": 150,
+      "pageCount": 24,
+      "coverCategory": "flat_pasted",
+      "binding": "合紙製本・見開きフラット",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 2904,
+      "shippingJpyTaxIncluded": 677,
+      "shippingMethod": "通常便（宅急便）",
+      "exampleTotalJpyTaxIncluded": 3581,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://www.photoback.jp/book/rough",
+      "sourceIds": [
+        "P2"
+      ],
+      "notes": "ネコポス290円の選択肢もあるが、この比較では宅急便を使用。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "photoback-life-24",
+      "providerId": "photoback",
+      "productName": "LIFE",
+      "widthMm": 148,
+      "heightMm": 210,
+      "pageCount": 24,
+      "coverCategory": "soft",
+      "binding": "無線綴じ",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 3734,
+      "shippingJpyTaxIncluded": 677,
+      "shippingMethod": "通常便（宅急便）",
+      "exampleTotalJpyTaxIncluded": 4411,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://www.photoback.jp/book/life",
+      "sourceIds": [
+        "P3"
+      ],
+      "notes": "マットな書籍用紙。アプリはページ数等に制限あり。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "bon-s-24",
+      "providerId": "bon",
+      "productName": "BON写真集 S",
+      "widthMm": 109,
+      "heightMm": 151,
+      "pageCount": 24,
+      "coverCategory": "hard",
+      "binding": "ハードカバー・角背",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 2200,
+      "shippingJpyTaxIncluded": 180,
+      "shippingMethod": "ゆうメール・1冊",
+      "exampleTotalJpyTaxIncluded": 2380,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://bon-book.jp/photobook/howtouse/",
+      "sourceIds": [
+        "B1",
+        "B2"
+      ],
+      "notes": "クラフト紙の表紙。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "bon-m-24",
+      "providerId": "bon",
+      "productName": "BON写真集 M",
+      "widthMm": 151,
+      "heightMm": 212,
+      "pageCount": 24,
+      "coverCategory": "hard",
+      "binding": "ハードカバー・角背",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 3300,
+      "shippingJpyTaxIncluded": 215,
+      "shippingMethod": "ゆうメール・1冊",
+      "exampleTotalJpyTaxIncluded": 3515,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://bon-book.jp/photobook/howtouse/",
+      "sourceIds": [
+        "B1",
+        "B2"
+      ],
+      "notes": "麻布の表紙。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "kitamura-pocket-square-22",
+      "providerId": "kitamura",
+      "productName": "ポケットブック ましかく",
+      "widthMm": 102,
+      "heightMm": 102,
+      "pageCount": 22,
+      "coverCategory": "unknown",
+      "binding": "写真仕上げ・表紙分類未確認",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 1360,
+      "shippingJpyTaxIncluded": 110,
+      "shippingMethod": "ゆうメール・1冊（クレジット決済）",
+      "exampleTotalJpyTaxIncluded": 1470,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://photobook.kitamura.jp/pocketbook/",
+      "sourceIds": [
+        "K1"
+      ],
+      "notes": "写真仕上げ。スマホアプリからネット注文。店頭受取は送料無料。",
+      "priceVerifiedAt": "2026-10-21"
+    },
+    {
+      "id": "kitamura-photoplus-a5t-22",
+      "providerId": "kitamura",
+      "productName": "フォトプラスブック A5タテ",
+      "widthMm": 150,
+      "heightMm": 200,
+      "pageCount": 22,
+      "coverCategory": "hard",
+      "binding": "レイフラット",
+      "smartphoneEditing": "yes",
+      "bookPriceJpyTaxIncluded": 3990,
+      "shippingJpyTaxIncluded": 660,
+      "shippingMethod": "宅配便（クレジット決済）",
+      "exampleTotalJpyTaxIncluded": 4650,
+      "comparisonQuantity": 1,
+      "officialProductUrl": "https://photobook.kitamura.jp/photoplus/",
+      "sourceIds": [
+        "K2"
+      ],
+      "notes": "レイフラット製本。店頭受取は送料無料。",
+      "priceVerifiedAt": "2026-10-21"
+    }
+  ],
+  "sources": [
+    {
+      "id": "M1",
+      "title": "MyBook book 商品仕様・価格",
+      "url": "https://www.mybook.co.jp/products/book/book/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "M2",
+      "title": "MyBook ART-SC 価格表",
+      "url": "https://www.mybook.co.jp/products/book/art-sc/price.html",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "M3",
+      "title": "MyBook ART-HC 価格表",
+      "url": "https://www.mybook.co.jp/products/book/art-hc/price.html",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "M4",
+      "title": "MyBook 送料と配送",
+      "url": "https://www.mybook.co.jp/price/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "M5",
+      "title": "MyBook 作成方法と対応商品",
+      "url": "https://www.mybook.co.jp/products/book/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "F1",
+      "title": "フジフォト オリジナルフォトアルバム価格・送料",
+      "url": "https://fujiphoto.co.jp/photoalbum/price.html",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "F2",
+      "title": "フジフォト スマホ・PC対応",
+      "url": "https://fujiphoto.co.jp/photoalbum/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "R1",
+      "title": "フォトレボ ソフトカバーA5バーチカル",
+      "url": "https://photorevo.net/products_item/sa5v/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "R2",
+      "title": "フォトレボ ハードカバーA5バーチカル",
+      "url": "https://photorevo.net/products_item/ha5v/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "R3",
+      "title": "フォトレボ ソフトカバーM",
+      "url": "https://photorevo.net/products_item/sm/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "R4",
+      "title": "フォトレボ 通常配送の送料",
+      "url": "https://photorevo.net/payment/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "P1",
+      "title": "Photoback POCKET",
+      "url": "https://www.photoback.jp/book/pocket",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "P2",
+      "title": "Photoback ROUGH",
+      "url": "https://www.photoback.jp/book/rough",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "P3",
+      "title": "Photoback LIFE",
+      "url": "https://www.photoback.jp/book/life",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "B1",
+      "title": "BON 写真集の通常価格・商品仕様",
+      "url": "https://bon-book.jp/photobook/howtouse/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "B2",
+      "title": "BON 送料（1冊注文時）",
+      "url": "https://bon-book.jp/law/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "K1",
+      "title": "カメラのキタムラ ポケットブック",
+      "url": "https://photobook.kitamura.jp/pocketbook/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    },
+    {
+      "id": "K2",
+      "title": "カメラのキタムラ フォトプラスブック",
+      "url": "https://photobook.kitamura.jp/photoplus/",
+      "checkedAt": "2026-10-21",
+      "kind": "official"
+    }
+  ],
+  "filterSpec": {
+    "sizeClass": {
+      "type": "single",
+      "values": [
+        "any",
+        "compact",
+        "medium",
+        "large"
+      ],
+      "rule": "最大辺が160mm以下=compact; 160mm超230mm以下=medium; 230mm超=large。独自分類であり公称サイズ名ではない"
+    },
+    "pageBand": {
+      "type": "single",
+      "values": [
+        "any",
+        "1-20",
+        "21-40"
+      ],
+      "rule": "各商品の代表バリエーションの正確なページ数に適用。範囲内の全ページ数に注文対応する意味ではない"
+    },
+    "coverCategory": {
+      "values": [
+        "any",
+        "hard",
+        "soft",
+        "flat_pasted",
+        "unknown"
+      ],
+      "rule": "合紙フラット・不明をハード/ソフトと断定しない"
+    },
+    "smartphoneEditing": {
+      "values": [
+        "any",
+        "must_yes"
+      ],
+      "rule": "must_yesではyesのみ掲載。unknownは表示しないか要確認として別枠にする"
+    },
+    "maxBudgetJpy": {
+      "type": "integer_or_null",
+      "rule": "送料込み比較例の金額に対してのみ適用。商品代金のみの予算とは区別する"
+    },
+    "sort": {
+      "values": [
+        "exampleTotalJpyTaxIncluded_asc",
+        "bookPriceJpyTaxIncluded_asc"
+      ],
+      "default": "exampleTotalJpyTaxIncluded_asc"
+    }
+  },
+  "pricingAssumptions": {
+    "quantity": 1,
+    "tax": "included",
+    "discounts": "none",
+    "payment": "credit_card_where_relevant",
+    "destination": "Japan domestic; remote-area surcharges not modeled",
+    "delivery": "商品別に公式確認できた配送方法を1つ指定。配送方法は商品ごとに異なり、必ずしも最安ではない",
+    "formula": "exampleTotalJpyTaxIncluded = bookPriceJpyTaxIncluded + shippingJpyTaxIncluded",
+    "pricingNote": "表示する送料込み額は、指定した配送方法で1冊注文する場合の比較例。全商品に共通する配送速度や郵送手段ではない。"
+  },
+  "decisions": {
+    "scope": "6社・16商品バリエーション（6/16/20/22/24ページなど。全ページ数全サイズ対応を主張しない）",
+    "officialLinks": "商品個別ページを案内。アフィリンクは未設定",
+    "unknownHandling": "スマホ対応やカバー種別が未確認ならunknownのまま。料金の未確認追加バリエーションは出さない。",
+    "noPriceEstimates": "ページ数の追加料金やサイズ変更を計算式で推測しない。商品価格はすべて公式掲載値",
+    "seo": "誇大な「最安」「おすすめ」ランキングを避け、データの確認日を表示"
+  },
+  "knownLimitations": [
+    "サイトは全商品・全ページ数の比較ではない。掲載16バリエーションのみ。",
+    "各社のサイズ・ページ数・印刷方式・合紙製本・仕上がり品質は異なり、送料込み順が同等品質での安さを示すわけではない。",
+    "配送方法は混在。宅急便・ゆうメール・ネコポスなどの到着日数は比較しない。",
+    "MyBook ART-HC 180S 20ページのスマホ編集対応は個別未確認。",
+    "カメラのキタムラ ポケットブックの表紙はhard/softを断定しない。",
+    "Photobackの290円ネコポスは公式に案内があるが、各商品・条件で使えるかの精査を省略し、宅急便677円を使った。",
+    "MyBook ART-SC/ART-HCのゆうメール適用可否は商品/冊数で変わるため宅急便650円を使った。",
+    "割引・クーポン・会員特典・まとめ買い・代引き手数料・離島追加料金・納期保証は除外。",
+    "フジフォトの公式サイトでは化粧箱オプション記載内に税込表記の食い違いがあるため、オプションは除外した。",
+    "ASP公式紹介記事の掲載は、現在の提携承認や成果地点を保証しない。"
+  ]
+}
