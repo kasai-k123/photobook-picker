@@ -1,0 +1,30 @@
+---
+import { catalog } from '../lib/catalog';
+import { seo } from '../lib/seo';
+import '../styles/global.css';
+interface Props { title: string; description?: string; noindex?: boolean; service?: string }
+const { title, description = '6社16商品のフォトブックを、サイズ・ページ数・表紙・送料込みの参考額で比較できます。', noindex = false, service } = Astro.props;
+const meta = seo(import.meta.env.SITE_URL, Astro.url.pathname, noindex);
+const fullTitle = title === catalog.site.proposedName ? title : `${title} | ${catalog.site.proposedName}`;
+---
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title><meta name="description" content={description} />
+    <meta name="robots" content={meta.robots} />
+    {meta.canonical && <link rel="canonical" href={meta.canonical} />}
+    <meta property="og:title" content={fullTitle} /><meta property="og:description" content={description} />
+    <meta property="og:type" content="website" /><meta property="og:locale" content="ja_JP" />
+    <meta property="og:site_name" content={catalog.site.proposedName} />
+    {meta.canonical && <meta property="og:url" content={meta.canonical} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  </head>
+  <body data-page={noindex ? '/404/' : Astro.url.pathname} data-service={service}>
+    <a class="skip" href="#main">本文へ移動</a>
+    <header class="site-header"><a class="brand" href="/"><span aria-hidden="true">▥</span> フォトブック料金くらべ</a><nav aria-label="メイン"><a href="/">商品を比較</a><a href="/methodology/">比較方法</a></nav></header>
+    <main id="main"><slot /></main>
+    <footer><div><strong>フォトブック料金くらべ</strong><p>情報確認日：<time datetime={catalog.asOf}>{catalog.asOf}</time></p></div><nav aria-label="フッター"><a href="/methodology/">比較方法・出典</a><a href="/privacy/">プライバシー</a></nav></footer>
+    <script>import { initPage } from '../lib/client'; initPage();</script>
+  </body>
+</html>
