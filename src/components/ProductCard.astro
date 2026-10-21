@@ -10,6 +10,6 @@ const provider = catalog.providers.find(provider => provider.id === p.providerId
   <div class="spec-tags"><span>{p.widthMm} × {p.heightMm} mm</span><span>{p.pageCount}ページ</span></div>
   <dl class="specs"><div><dt>表紙</dt><dd>{covers[p.coverCategory]}</dd></div><div><dt>製本</dt><dd>{p.binding}</dd></div><div><dt>スマホ編集</dt><dd>{smartphoneLabels[p.smartphoneEditing]}</dd></div></dl>
   <div class="price-block"><p>送料込み参考額 <strong>{yen(p.exampleTotalJpyTaxIncluded)}</strong></p><div class="price-parts"><span>本体 {yen(p.bookPriceJpyTaxIncluded)}</span><span>送料 {yen(p.shippingJpyTaxIncluded)}</span></div><p class="shipping">配送：{p.shippingMethod}</p></div>
-  <p class="product-note">{p.notes}</p>
+  {p.notes && <p class="product-note">{p.notes}</p>}
   <a class="official-link" href={p.officialProductUrl} data-outbound={p.id} target="_blank" rel="noopener noreferrer">公式で商品を見る <span aria-hidden="true">↗</span><span class="sr-only">（新しいタブ）</span></a>
 </article>
