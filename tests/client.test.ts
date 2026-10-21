@@ -11,6 +11,8 @@ describe('comparison UI and telemetry', () => {
   });
   afterEach(() => { vi.unstubAllGlobals(); delete document.body.dataset.service; });
   it('updates cards, count, empty state, sorting, reset and tracks actions without budget values', async () => {
+    // A failed analytics response must not interrupt comparisons or outbound clicks.
+    vi.mocked(fetch).mockResolvedValue(new Response(null,{status:503}));
     initPage();
     const input = document.querySelector<HTMLInputElement>('[name=budget]')!;
     input.value='1600'; input.dispatchEvent(new Event('input',{bubbles:true})); input.dispatchEvent(new Event('change',{bubbles:true}));

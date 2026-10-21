@@ -28,8 +28,9 @@ export async function handleEvents(request: Request, env: Env): Promise<Response
   try { payload = JSON.parse(new TextDecoder().decode(bytes)); } catch { return new Response(null, { status: 400, headers }); }
   const event = validateEvent(payload);
   if (!event) return new Response(null, { status: 400, headers });
+  if (!env.EVENTS) return new Response(null, { status: 503, headers });
   try {
-    env.EVENTS?.writeDataPoint({ indexes: [event.event], blobs: [event.event, event.path, event.target], doubles: [1] });
+    env.EVENTS.writeDataPoint({ indexes: [event.event], blobs: [event.event, event.path, event.target], doubles: [1] });
   } catch { return new Response(null, { status: 503, headers }); }
   return new Response(null, { status: 204, headers });
 }

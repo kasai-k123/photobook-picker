@@ -8,7 +8,9 @@ describe('event ingestion', () => {
     ['page_view','/',''], ['comparison_interaction','/','budget'], ['service_detail_view','/services/bon/','bon'], ['outbound_click','/','bon-s-24'], ['outbound_click','/methodology/','B1']
   ])('writes %s with fixed fields only', async (event, path, target) => {
     const bindings = env();
-    expect((await handleEvents(request({event,path,target,email:'not-stored@example.test',budget:1600}), bindings)).status).toBe(204);
+    const response = await handleEvents(request({event,path,target,email:'not-stored@example.test',budget:1600}), bindings);
+    expect(response.status).toBe(204);
+    expect(response.headers.get('Cache-Control')).toBe('no-store');
     expect(bindings.EVENTS.writeDataPoint).toHaveBeenCalledWith({indexes:[event],blobs:[event,path,target],doubles:[1]});
   });
   it.each([
@@ -27,11 +29,22 @@ describe('event ingestion', () => {
     expect((await handleEvents(new Request(`${origin}/api/events`, {method:'POST', headers:{Origin:origin,'Content-Type':'application/json'}, body:'{' }), bindings)).status).toBe(400);
     expect(bindings.EVENTS.writeDataPoint).not.toHaveBeenCalled();
   });
-  it('works without a local dataset and handles ingestion failures', async () => {
+  it('returns 503 without EVENTS and still serves ordinary pages', async () => {
     const bindings: Env = env(); delete bindings.EVENTS;
-    expect((await handleEvents(request({event:'page_view',path:'/',target:''}), bindings)).status).toBe(204);
+    const response = await worker.fetch(request({event:'page_view',path:'/',target:''}), bindings);
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Cache-Control')).toBe('no-store');
+    bindings.ASSETS.fetch = vi.fn(async () => new Response('page', {status:200}));
+    const page = await worker.fetch(new Request(origin), bindings);
+    expect(page.status).toBe(200);
+    expect(await page.text()).toBe('page');
+  });
+  it('returns 503 when writing fails', async () => {
+    const bindings: Env = env();
     bindings.EVENTS = {writeDataPoint(){throw new Error('offline');}};
-    expect((await handleEvents(request({event:'page_view',path:'/',target:''}), bindings)).status).toBe(503);
+    const response = await handleEvents(request({event:'page_view',path:'/',target:''}), bindings);
+    expect(response.status).toBe(503);
+    expect(response.headers.get('Cache-Control')).toBe('no-store');
   });
   it('serves real missing pages as 404 with noindex, including HEAD', async () => {
     const bindings = env();
