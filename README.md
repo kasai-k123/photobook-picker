@@ -34,9 +34,9 @@ npm run preview
 
 ## データ・比較仕様
 
-- 元JSON：`src/data/photobook-official-mvp-2026-10-21.json`（添付ファイルを改変せず収録）
+- 比較データ：`src/data/photobook-official-mvp-2026-10-21.json`（価格・仕様・リンクは調査時の値を維持。公開文言のみ調整）
 - 調査メモ：`docs/research.md`（添付メモをそのまま収録）
-- 原本ハッシュ：`docs/data.sha256`
+- データファイルのSHA-256：`docs/data.sha256`
 - 比較ロジック：`src/lib/catalog.ts`
 
 価格は税込・1冊・割引なしで、商品に指定された配送方法の送料を使用します。ページ追加や別仕様の価格を推定しません。サイズは長辺160mm以下／160mm超230mm以下／230mm超。スマホ対応のみの絞り込みは `yes` のみです。未確認の表紙は「不明」、スマホ編集は「要確認」と表示します。
