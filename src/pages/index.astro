@@ -4,12 +4,12 @@ import ProductCard from '../components/ProductCard.astro';
 import { catalog, compareProducts } from '../lib/catalog';
 ---
 <Layout title="フォトブック料金くらべ">
-  <section class="intro"><p class="eyebrow">6社・16商品を掲載</p><h1>フォトブックの料金を<br class="mobile-break" />送料込みでくらべる</h1><p>サイズやページ数を選んで、予算に合う一冊を探せます。</p><p class="verified">情報確認日：{catalog.asOf}</p></section>
-  <aside class="notice">金額は税込・1冊・割引なし。商品ごとに仕様と配送方法が異なるため、同条件の最安価格を示すものではありません。<a href="/methodology/">比較方法を見る</a></aside>
-  <section aria-labelledby="filter-title" class="filter-section"><div class="section-heading"><h2 id="filter-title">条件を選ぶ</h2><span>指定なしでも比較できます</span></div>
+  <section class="intro"><p class="eyebrow">6社・16商品を掲載</p><h1>フォトブックの料金を<br class="mobile-break" />送料込みでくらべる</h1><p>サイズやページ数を絞って、予算に合う商品を探せます。</p><p class="verified">情報確認日：{catalog.asOf}</p></section>
+  <aside class="notice">価格は税込・1冊分、割引なし。商品ごとにサイズやページ数、配送方法が異なるため、同じ条件での最安価格ではありません。<a href="/methodology/">比較方法を見る</a></aside>
+  <section aria-labelledby="filter-title" class="filter-section"><div class="section-heading"><h2 id="filter-title">条件を選ぶ</h2></div>
     <form id="filters">
       <div class="filter-grid">
-        <label>サイズ<select name="size"><option value="any">すべて</option><option value="compact">小さめ（最大辺160mm以下）</option><option value="medium">中くらい（最大辺230mm以下）</option><option value="large">大きめ（最大辺230mm超）</option></select></label>
+        <label>サイズ<select name="size"><option value="any">すべて</option><option value="compact">小さめ（160mm以下）</option><option value="medium">中くらい（160mm超〜230mm）</option><option value="large">大きめ（230mm超）</option></select></label>
         <label>ページ数<select name="pages"><option value="any">すべて</option><option value="1-20">1〜20ページ</option><option value="21-40">21〜40ページ</option></select></label>
         <label>表紙<select name="cover"><option value="any">すべて</option><option value="hard">ハード</option><option value="soft">ソフト</option><option value="flat_pasted">合紙フラット</option><option value="unknown">不明</option></select></label>
         <label>送料込み予算の上限<div class="budget-input"><input name="budget" type="number" min="0" step="1" placeholder="指定なし" inputmode="numeric" /><span>円</span></div></label>
